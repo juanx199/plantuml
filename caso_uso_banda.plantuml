@@ -1,0 +1,21 @@
+@startuml
+
+package "Banda aleatoria" {
+    usecase "Armar Banda"
+    usecase "Afinar Banda"
+    usecase "Tocar Banda"
+    usecase "Tocar Instrumento"
+    usecase "Afinar Instrumento"
+    usecase "Generar Instrumento"
+}
+
+
+
+
+usuario -- "Afinar Banda"
+usuario -- "Tocar Banda"
+
+"Tocar Banda" ..> "Tocar Instrumento" : include
+"Afinar Banda" ..> "Afinar Instrumento" : include
+"Armar Banda" ..> "Generar Instrumento" : include
+@enduml
